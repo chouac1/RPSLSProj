@@ -10,6 +10,8 @@ namespace RPSLSProj
     {
         static void Main(string[] args)
         {
+
+            //PLANNING: Create different classes (human--maybe inherit to AI and player2 class, game==to battlefield from RVD) 
         }
     }
 }
