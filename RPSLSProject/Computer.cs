@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace RPSLSProj
 {
-    class Player2
+    class Computer : Player
     {
         //MEMBER VARIABLES (HAS A)
 
         //CONSTRUCTOR
-        public Player2()
+        public Computer()
         {
 
         }
 
         //MEMBER METHODS (CAN DO)
+
+        public override void ChooseGesture()
+        {
+            // use random number to choose gesture
+        }
     }
 }

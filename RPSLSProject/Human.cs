@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPSLSProj
 {
-    class Human
+    class Human : Player
     {
         //MEMBER VARIABLES (HAS A)
 
@@ -19,6 +19,11 @@ namespace RPSLSProj
         }
 
         //METHODS (CAN DO)
+
+        public override void ChooseGesture()
+        {
+            //capture user input
+        }
 
 
     }
