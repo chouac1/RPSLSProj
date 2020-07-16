@@ -11,7 +11,11 @@ namespace RPSLSProj
         static void Main(string[] args)
         {
 
-            //PLANNING: Create different classes (human--maybe inherit to AI and player2 class, game==to battlefield from RVD) 
+            //PLANNING: Create different classes (human--maybe inherit to AI and player2 class, game==to battlefield from RVD), if statements
+            //to achieve which variable (RPS) beats the other, 
+
+            Game game = new Game();
+            game.PlayRounds();
         }
     }
 }

@@ -6,20 +6,16 @@ using System.Threading.Tasks;
 
 namespace RPSLSProj
 {
-    class Human
+    class AI
     {
         //MEMBER VARIABLES (HAS A)
 
-        public string playerOne;
-
-        //CONSTRUCTOR (SPAWNS)
-        public Human()
+        //CONSTRUCTOR
+        public AI()
         {
 
         }
 
-        //METHODS (CAN DO)
-
-
+        //MEMBER METHODS (CAN DO)
     }
 }
