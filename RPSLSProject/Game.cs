@@ -32,14 +32,19 @@ namespace RPSLSProj
         public void CheckScores()
         {
             //this is the while loop that will check for scores
-
+            
             while (playerOne.score < 3 && playerTwo.score < 3)
             {
                 PlayRounds();
             }
+
+
         }
 
         public void DisplayRules()
+            
+        //how to reloop so the player can reinput their choices? Will need to revist loops slideshows and ask instructor.
+
         {
             Console.WriteLine("Welcome to Rock, Paper, and Scissos, Lizard and Spock... A classic game with a twist!");
         }
@@ -61,9 +66,13 @@ namespace RPSLSProj
             {
                 Console.WriteLine("Try again. Choose between 1 or 2 players to start the game.");
             }
+
+
         }
 
         public void PlayRounds()
+
+        //is there an easier way to do this or do I have to put every possibility as an "if/else if" statement.
         {
 
             playerOne.ChooseGesture();
@@ -109,7 +118,7 @@ namespace RPSLSProj
 
         public void DisplayScores()
         {
-            Console.WriteLine("CURRENT SCORES ARE" + "Player 1: " + playerOne.score + " || " + playerTwo.score);
+            Console.WriteLine("CURRENT SCORES\n" + "Player 1:  " + playerOne.score + " || " + "Player 2:  " + playerTwo.score + "\n");
 
         }
 
