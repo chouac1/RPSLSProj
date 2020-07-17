@@ -11,11 +11,11 @@ namespace RPSLSProj
         static void Main(string[] args)
         {
 
+            Game game = new Game();
+            game.RunGame();
+
             //PLANNING: Create different classes (human--maybe inherit to AI and player2 class, game==to battlefield from RVD), if statements
             //to achieve which variable (RPS) beats the other, 
-
-            Game game = new Game();
-            game.PlayRounds();
 
             // Welcome/Setup --- MVP (Minimal Viable Project)
             // 1. Display rules to user
@@ -42,7 +42,7 @@ namespace RPSLSProj
             //human (subclass of player)
             //Game
 
-          
+
 
 
         }

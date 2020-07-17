@@ -10,19 +10,19 @@ namespace RPSLSProj
     {
         //MEMBER VARIABLES (HAS A)
 
-        public string playerOne;
-
         //CONSTRUCTOR (SPAWNS)
         public Human()
         {
-
+            
         }
 
         //METHODS (CAN DO)
 
         public override void ChooseGesture()
         {
-            //capture user input
+            Console.WriteLine("Choose between rock, paper, scissors, lizard, or spock." ); 
+            chosenGesture = Console.ReadLine();
+
         }
 
 

@@ -12,24 +12,17 @@ namespace RPSLSProj
 
         //Parent class of human and computer
 
-        public int rock;
-        public int paper;
-        public int scissors;
-        public int lizard;
-        public int spock;
-
         public string name;
-        public string score;
-        public string chooseGesture;
+        public int score;
+        public string chosenGesture;
+
+        public List<string> gestures;
 
         //CONSTRUCTOR
         public Player()
         {
-            rock = 1;
-            paper = 2;
-            scissors = 3;
-            lizard = 4;
-            spock = 5;
+            gestures = new List<string>() { "rock", "paper", "scissors", "lizard", "spock" };
+            score = 0;
         }
 
         //MEMBER METHODS (CAN DO)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,13 +13,8 @@ namespace RPSLSProj
 
         //will need to turn RPSLS into a list per USER STORY, possibly even put inside the Human class
 
-        Random rng;
-        public string playerInput;
-        int playerOneScore;
-        int playerTwoScore;
-        int computerScore;
         public Player playerOne;
-        public Computer computerPlayer;
+        public Player playerTwo;
 
         public List<string> gestures;
 
@@ -27,52 +23,32 @@ namespace RPSLSProj
         //CONSTRUCTOR (SPAWNS)
         public Game()
         {
-
-            playerOneScore = 0;
-            playerTwoScore = 0;
-            computerScore = 0;
-            rng = new Random();
             playerOne = new Human();
-            playerTwo = 
-    }
+
+        }
 
         //METHODS (CAN DO)
 
-        public int ChooseRPSLS()
+        public void CheckScores()
         {
-            Console.WriteLine("Please choose between rock, paper, scissors, lizard, or spock: ");
-            return int.Parse(Console.ReadLine());
-        }
+            //this is the while loop that will check for scores
 
-        public int ChooseForCPU()
-        {
-            int result = rng.Next()
-            return result;
-        }
-        
-        public void PlayRounds()
-        {
-
-            while (playerOneScore < 3 && playerTwoScore < 3)
+            while (playerOne.score < 3 && playerTwo.score < 3)
             {
-                ChooseRPSLS();
-                int playerInput = 
-
+                PlayRounds();
             }
         }
 
         public void DisplayRules()
         {
-            // display the rules of the game
+            Console.WriteLine("Welcome to Rock, Paper, and Scissos, Lizard and Spock... A classic game with a twist!");
         }
         public void ChooseOpponentType() 
         {
-            // if-else/if statement to decide opponent
-            // grab user input
-            // instantiate playerTwo as a human or computer
 
             Console.WriteLine("Do you want 1 player or 2 players?");
             string input = Console.ReadLine();
+
             if (input == "1")
             {
                 playerTwo = new Computer();
@@ -81,10 +57,70 @@ namespace RPSLSProj
             {
                 playerTwo = new Human();
             }
+            else
+            {
+                Console.WriteLine("Try again. Choose between 1 or 2 players to start the game.");
+            }
         }
+
+        public void PlayRounds()
+        {
+
+            playerOne.ChooseGesture();
+            playerTwo.ChooseGesture();
+
+            if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "scissors")
+            {
+                Console.WriteLine("Great choice! Rock crushes scissors! You win a point.\n");
+                playerOne.score++;
+                DisplayScores();
+            }
+
+            else if(playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "lizard")
+            {
+                Console.WriteLine("Great choice! Rock crushes lizard! You win a point.\n");
+                playerOne.score++;
+                DisplayScores();
+            }
+
+            else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "paper")
+            {
+                Console.WriteLine("Bummer! You loose. Paper covers rock! Player 2 wins a point.\n");
+                playerTwo.score++;
+                DisplayScores();
+            }
+
+            else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "spock")
+            {
+                Console.WriteLine("Bummer! You loose. Spock vaporizes rock! Player 2 wins a point.\n");
+                playerTwo.score++;
+                DisplayScores();
+            }
+
+            else if (playerOne.chosenGesture == "rock" && playerTwo.chosenGesture == "rock")
+            {
+                Console.WriteLine("This is a tie! Try again!\n");
+                PlayRounds();
+                DisplayScores();
+            }
+
+            
+        }
+
+        public void DisplayScores()
+        {
+            Console.WriteLine("CURRENT SCORES ARE" + "Player 1: " + playerOne.score + " || " + playerTwo.score);
+
+        }
+
 
         public void RunGame()
         {
+            DisplayRules();
+            ChooseOpponentType();
+            PlayRounds();
+            CheckScores();
+
             // Welcome/Setup --- MVP (Minimal Viable Project) 
             // 1. Display rules to user 
             // 2. Prompt the user to choose 1 or 2 players
@@ -104,8 +140,6 @@ namespace RPSLSProj
             // Conclusion
             // 12. display the winner
 
-            DisplayRules();
-            ChooseOpponentType();
             // put the loop method at the end
         }
 

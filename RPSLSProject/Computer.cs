@@ -10,17 +10,26 @@ namespace RPSLSProj
     {
         //MEMBER VARIABLES (HAS A)
 
+        Random rand;
+        
+
         //CONSTRUCTOR
         public Computer()
         {
-
+            rand = new Random();
         }
 
         //MEMBER METHODS (CAN DO)
 
         public override void ChooseGesture()
         {
-            // use random number to choose gesture
+            int randomNumber = rand.Next(0, gestures.Count);
+
+            chosenGesture =  gestures[randomNumber];
+
+            Console.WriteLine("The computer has chosen: " + chosenGesture);
+        
+            
         }
     }
 }
