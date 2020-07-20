@@ -11,7 +11,7 @@ namespace RPSLSProj
         //MEMBER VARIABLES (HAS A)
 
         Random rand;
-        
+
 
         //CONSTRUCTOR
         public Computer()
@@ -25,11 +25,11 @@ namespace RPSLSProj
         {
             int randomNumber = rand.Next(0, gestures.Count);
 
-            chosenGesture =  gestures[randomNumber];
+            chosenGesture = gestures[randomNumber];
 
             Console.WriteLine("The computer has chosen: " + chosenGesture);
-        
-            
+
+
         }
     }
 }

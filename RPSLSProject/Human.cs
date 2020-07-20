@@ -13,14 +13,14 @@ namespace RPSLSProj
         //CONSTRUCTOR (SPAWNS)
         public Human()
         {
-            
+
         }
 
         //METHODS (CAN DO)
 
         public override void ChooseGesture()
         {
-            Console.WriteLine("Choose between rock, paper, scissors, lizard, or spock." ); 
+            Console.WriteLine("Choose between rock, paper, scissors, lizard, or spock.");
             chosenGesture = Console.ReadLine();
 
         }
