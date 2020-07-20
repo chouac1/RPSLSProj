@@ -104,7 +104,7 @@ namespace RPSLSProj
 
             // ------------------------------- PAPER VS. GESTURES
 
-            else if (playerOne.chosenGesture == "paper" && playerTwo.chosenGesture == "rock")
+            if (playerOne.chosenGesture == "paper" && playerTwo.chosenGesture == "rock")
             {
                 Console.WriteLine("Great choice! paper covers rock! You win a point.\n");
                 playerOne.score++;
@@ -137,119 +137,121 @@ namespace RPSLSProj
                 Console.WriteLine("It's a TIE! Try again!.\n");
                 DisplayScores();
 
-                // ------------------------------- SCISSORS VS. GESTURES
+            }
 
-                if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "paper")
-                {
-                    Console.WriteLine("Great choice! scissors cuts paper! You win a point.\n");
-                    playerOne.score++;
-                    DisplayScores();
-                }
+            // ------------------------------- SCISSORS VS. GESTURES
 
-                else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "lizard")
-                {
-                    Console.WriteLine("Great choice! scissors decapitates lizard! You win a point.\n");
-                    playerOne.score++;
-                    DisplayScores();
-                }
+            else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "paper")
+            {
+                Console.WriteLine("Great choice! scissors cuts paper! You win a point.\n");
+                playerOne.score++;
+                DisplayScores();
+            }
 
-                else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "spock")
-                {
-                    Console.WriteLine("Bummer! spock smashes scissors! Player 2 wins a point.\n");
-                    playerTwo.score++;
-                    DisplayScores();
-                }
+            else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "lizard")
+            {
+                Console.WriteLine("Great choice! scissors decapitates lizard! You win a point.\n");
+                playerOne.score++;
+                DisplayScores();
+            }
 
-                else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "rock")
-                {
-                    Console.WriteLine("Bummer! rock smashes scissors! Player 2 wins a point.\n");
-                    playerTwo.score++;
-                    DisplayScores();
-                }
+            else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "spock")
+            {
+                Console.WriteLine("Bummer! spock smashes scissors! Player 2 wins a point.\n");
+                playerTwo.score++;
+                DisplayScores();
+            }
 
-                else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "scissors")
-                {
-                    Console.WriteLine("It's a TIE! Try again!\n");
-                    DisplayScores();
-                }
-                // ------------------------------- LIZARD VS. GESTURES
+            else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "rock")
+            {
+                Console.WriteLine("Bummer! rock smashes scissors! Player 2 wins a point.\n");
+                playerTwo.score++;
+                DisplayScores();
+            }
 
-                else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "paper")
-                {
-                    Console.WriteLine("Great choice! lizard eats paper! You win a point.\n");
-                    playerOne.score++;
-                    DisplayScores();
-                }
+            else if (playerOne.chosenGesture == "scissors" && playerTwo.chosenGesture == "scissors")
+            {
+                Console.WriteLine("It's a TIE! Try again!\n");
+                DisplayScores();
+            }
+            // ------------------------------- LIZARD VS. GESTURES
 
-                else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "lizard")
-                {
-                    Console.WriteLine("It's a TIE! Try again! \n");
-                    DisplayScores();
-                }
+            else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "paper")
+            {
+                Console.WriteLine("Great choice! lizard eats paper! You win a point.\n");
+                playerOne.score++;
+                DisplayScores();
+            }
 
-                else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "spock")
-                {
-                    Console.WriteLine("Great choice! lizard poisons spock! You win a point.\n");
-                    playerOne.score++;
-                    DisplayScores();
-                }
+            else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "lizard")
+            {
+                Console.WriteLine("It's a TIE! Try again! \n");
+                DisplayScores();
+            }
 
-                else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "rock")
-                {
-                    Console.WriteLine("Bummer! rock crushes lizard! Player 2 wins a point.\n");
-                    playerTwo.score++;
-                    DisplayScores();
-                }
+            else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "spock")
+            {
+                Console.WriteLine("Great choice! lizard poisons spock! You win a point.\n");
+                playerOne.score++;
+                DisplayScores();
+            }
 
-                else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "scissors")
-                {
-                    Console.WriteLine("Bummer! scissors decapitates lizard. Player 2 wins a point.\n");
-                    playerTwo.score++;
-                    DisplayScores();
-                }
+            else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "rock")
+            {
+                Console.WriteLine("Bummer! rock crushes lizard! Player 2 wins a point.\n");
+                playerTwo.score++;
+                DisplayScores();
+            }
+
+            else if (playerOne.chosenGesture == "lizard" && playerTwo.chosenGesture == "scissors")
+            {
+                Console.WriteLine("Bummer! scissors decapitates lizard. Player 2 wins a point.\n");
+                playerTwo.score++;
+                DisplayScores();
+            }
 
                 // ------------------------------- SPOCK VS. GESTURES
 
-                else if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "paper")
-                {
-                    Console.WriteLine("Bummer! paper disproves spock! Player 2 wins a point.\n");
-                    playerTwo.score++;
-                    DisplayScores();
-                }
-
-                else if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "lizard")
-                {
-                    Console.WriteLine("Bummer! lizard poisons spock! Player 2 wins a point.\n");
-                    playerTwo.score++;
-                    DisplayScores();
-                }
-
-                else if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "spock")
-                {
-                    Console.WriteLine("It's a TIE! Try again.\n");
-                    DisplayScores();
-                }
-
-                else if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "rock")
-                {
-                    Console.WriteLine("Great choice! spock vaporizes rock! You win a point!\n");
-                    playerOne.score++;
-                    DisplayScores();
-                }
-
-                else if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "scissors")
-                {
-                    Console.WriteLine("Great choice! spock smashes scissors! You win a point!\n");
-                    playerOne.score++;
-                    DisplayScores();
-                }
-
-
-
+            if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "paper")
+            {
+                Console.WriteLine("Bummer! paper disproves spock! Player 2 wins a point.\n");
+                playerTwo.score++;
+                DisplayScores();
             }
-        }
 
-        public void CheckScores()
+            else if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "lizard")
+            {
+                Console.WriteLine("Bummer! lizard poisons spock! Player 2 wins a point.\n");
+                playerTwo.score++;
+                DisplayScores();
+            }
+
+            else if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "spock")
+            {
+                Console.WriteLine("It's a TIE! Try again.\n");
+                DisplayScores();
+            }
+
+            else if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "rock")
+            {
+                Console.WriteLine("Great choice! spock vaporizes rock! You win a point!\n");
+                playerOne.score++;
+                DisplayScores();
+            }
+
+            else if (playerOne.chosenGesture == "spock" && playerTwo.chosenGesture == "scissors")
+            {
+                Console.WriteLine("Great choice! spock smashes scissors! You win a point!\n");
+                playerOne.score++;
+                DisplayScores();
+            }
+
+
+
+        }
+        
+
+        public void PlayGame()
         {
             //this is the while loop that will check for scores to see if the game can continue
 
@@ -294,7 +296,7 @@ namespace RPSLSProj
         {
             DisplayRules();
             ChooseOpponentType();
-            CheckScores();
+            PlayGame();
             DeclareAChampion();
 
 
@@ -319,8 +321,9 @@ namespace RPSLSProj
             // 12. display the winner
 
             // put the loop method at the end
+            }
+
+
         }
-
-
     }
-}
+
