@@ -59,7 +59,7 @@ namespace RPSLSProj
                 }
                 else
                 {
-                    Console.WriteLine("Invalid choice! Please only pick between rock, paper, scissors, lizard, or spock (lower cases)");
+                    Console.WriteLine("Invalid choice! Please only pick between rock, paper, scissors, lizard, or spock (lower cases)\n");
                     ChooseGesture();
                 }
             }
