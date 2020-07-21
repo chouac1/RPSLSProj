@@ -27,7 +27,7 @@ namespace RPSLSProj
 
             chosenGesture = gestures[randomNumber];
 
-            Console.WriteLine("The computer has chosen: " + chosenGesture);
+            Console.WriteLine(chosenGesture);
 
 
         }

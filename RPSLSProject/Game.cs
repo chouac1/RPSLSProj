@@ -63,7 +63,9 @@ namespace RPSLSProj
 
         {
 
+            Console.WriteLine("Player 1:");
             playerOne.ChooseGesture();
+            Console.WriteLine("Player 2:");
             playerTwo.ChooseGesture();
 
 
@@ -245,7 +247,6 @@ namespace RPSLSProj
                 playerOne.score++;
                 DisplayScores();
             }
-
 
 
         }
